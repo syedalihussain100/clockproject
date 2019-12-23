@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clock</title>
+    <link rel="stylesheet" href="clock.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400i&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="center">
+        <h1 class="new-year"><span>2020</span></h1> <br> <h1>New Year CountDown</h1>
+        <div id="clock">
+            </div>
+            <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+              crossorigin="anonymous"></script>
+              <script src="countdown.js"></script>
+              <script type="text/javascript">
+              $('#clock').countdown('2020/1/1',function(event){
+                  var $this = $(this).html(event.strftime(''
+                  +'<div><span>%w</span><span>weeks</span></div>'
+                  +'<div><span>%d</span><span>Days</span></div>'
+                  +'<div><span>%H</span><span>Hr</span></div>'
+                  +'<div><span>%M</span><span>Min</span></div>'
+                  +'<div><span>%S</span><span>Sec</span></div>'
+                  ))
+              })
+              </script>
+
+              <h2 class="lol">MADE-BY-ALI</h2>
+</body>
+</html>
